@@ -17,7 +17,7 @@
 </br>
 
 ## 개발 도구
-![image](https://github.com/user-attachments/assets/3c020170-935e-45cb-b739-ddbb141694a8)
+<img src="https://github.com/user-attachments/assets/3c020170-935e-45cb-b739-ddbb141694a8" width="300" height="150">
 
 </br>
 
