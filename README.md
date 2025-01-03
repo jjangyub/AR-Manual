@@ -104,7 +104,29 @@
 
 <br/>
 
-#### 4. C# 스크립트 작
+#### 4. C# 스크립트 작성
+- 조립 화면에서 버튼을 통해 단계를 이동하기 위해 SceneManagement의 SceneManager.LoadScene을 이용하여 각 장면으로 이동할 수 있는 함수 작성
+  ![image](https://github.com/user-attachments/assets/49a3c9cd-f0e8-48c6-a5c3-d7cb15c69a13) <br/>
+  => 화면 전환 함수
+  
+</br>
+
+- 조립 설명 기능에서 부품 오브젝트가 조립 방향에 맞게 움직이게 하기 위해 C# 스크립트 작성
+- Start 함수 : 처음에 한번만 호출되는 함수
+- Update 함수 : 프레임마다 호출되는 함수
+</br>
+
+- Start 함수가 호출되면 오브젝트의 현재 local 좌표를 minY 값으로 저장함
+- minY 값에서 0.3f만큼 위를 maxY 값으로 설정
+</br>
+
+- Update에서는 오브젝트의 local 좌표값의 y축값을 일정한 거리 (적절한 속도를 정해 속도*시간을 하여 거리를 구함)를 sign 값에 곱해 더해줌
+- sign 값이 +1이면 오브젝트가 위로 올라가고,
+            -1이면 오브젝트가 밑으로 내려감
+- 만약 현재 오브젝트의 local값이 minY보다 작거나 maxY보다 크다면 sign값에 -1을 곱해서 오브젝트의 이동 방향을 바꿔줌
+  
+![image](https://github.com/user-attachments/assets/b4310af8-e0da-4579-b984-8f900ddd0087)<br/>
+  => 오브젝트 이동 스크립트 
 
 
 5.  
