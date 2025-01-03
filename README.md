@@ -26,6 +26,9 @@
 - AR manual에 대해 찾아보았을 때 제품을 구매한 소비자가 사용하도록 상용화된 설명서는 차량 설명서 정도였고 대부분 공장이나 기업에서 직원 교육용이나 설비 사용설명을 위한 것이었습니다.
   하지만 이런 ar manual은 적용된 제품이 모두 위치가 고정되어 있거나 움직이지 않았기 때문에 앞에 보이는 사진처럼 마커를 부착하여 ar 콘텐츠를 증강하는 방식을 사용하였습니다. 저희가 제작하려는 조립 설명서는 부품의 위치가 정해져 있지 않고 사용자가 어느 각도에서 촬영할지 모르기 때문에 마커를 이용하기 어렵습니다. 따라서 부품 전체를 하나의 마커로 인식하는 모델 타겟 기능을 사용하여 제작하였습니다. 
 
+![image](https://github.com/user-attachments/assets/adaddc43-31e6-45f0-9ccd-a0ffc0538ee2)
+<br/>=> 공장에서 사용하는 예시, 기계 앞에 마커가 부착되어 있음
+  
 </br>
 
 ---
@@ -68,13 +71,42 @@
     7) Guide View :  이 프로젝트에서 제작된 모델은 모두 360°에서 추적할 수 있어야 하기에 Advanced View를 선택하였고, 그중 Full 360°를 선택
 
 
-- 위의 과정을 완료 후 만들어진 DB를 학습시킨 후 unitypackage를 다운 받아 Unity에서 사용
+- 위의 과정을 완료 후 만들어진 DB를 학습시킨 후 unitypackage를 다운 받아 Unity에서 사용 <br/>
+  (https://developer.vuforia.com/home => vuforia 사이트)
 
-https://developer.vuforia.com/home => vuforia 사이트
+  ![image](https://github.com/user-attachments/assets/79a67189-3ce0-4898-8e39-056a3dc234be)
+  => Model Target Generator 화면
+
+</br>
+
+#### 3. Unity에서 UI 제작 및 오브젝트와 모델 배치
+  - Unity에서 조립 화면의 UI 제작
+  - 의자의 조립 단계를 총 11단계로 구성
+  - 각 조립 단계별 scene을 만들어 관리함
+</br>
+![image](https://github.com/user-attachments/assets/520f5523-c859-4527-9a5f-6de8e826d419)
+
+</br>  =>  Unity에서 제작한 2단계 화면
+
+  - 화면의 상단 : 현재 단계 표시
+  - 화면의 양 옆 : 단계를 이동할 수 있는 버튼 제작
+  - 화면의 하단 : 현재 단계에 맞는 설명 첨부
+  - 
+<br/>
+
+- 모델과 오브젝트 배치
+  - 부품 인식 기능을 위해 Model Target Generator로 제작한 unitypackage와 Polycam에서 다운받은 OBJ 파일 Import
+  - 각 단계에 맞는 모델을 Model Target으로 Scene에 추가함
+  - 모델이 인식되면 부품의 색이 변하게 하려고 모델과 똑같은 오브젝트를 자식으로 추가하고 material 변경
+  - 조립에 필요한 오브젝트가 중강하기 위해 증강해야 하는 부분에 부품 오브젝트를 자식으로 추가
+</br>
+![image](https://github.com/user-attachments/assets/61164b21-36e6-4148-9682-5ce7d585bb26)
+
+<br/>
+
+#### 4. C# 스크립트 작
 
 
-
-4. 
 5.  
 
 </br>
