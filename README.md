@@ -47,6 +47,7 @@
 - 부품을 가운데에 두고 카메라로 여러 각도에서 촬영한 후 3차원으로 구성
 - FBX 파일과 OBJ 파일 2종류로 다운받아 사용
 
+<img src = 'images/제작한 3d 오브젝트.png'>
 </br>
 
 #### 2. Vuforia Model Target Generator에서 모델 제작
@@ -74,7 +75,7 @@
 - 위의 과정을 완료 후 만들어진 DB를 학습시킨 후 unitypackage를 다운 받아 Unity에서 사용 <br/>
   (https://developer.vuforia.com/home => vuforia 사이트)
 
-  ![image](https://github.com/user-attachments/assets/79a67189-3ce0-4898-8e39-056a3dc234be)<br>
+<img src ='images/model_target_generator.png'> <br>
   => Model Target Generator 화면
 
 </br>
@@ -84,7 +85,7 @@
   - 의자의 조립 단계를 총 11단계로 구성
   - 각 조립 단계별 scene을 만들어 관리함
 </br>
-![image](https://github.com/user-attachments/assets/520f5523-c859-4527-9a5f-6de8e826d419)
+<img src ='images/조립화면_UI.png'>
 
 </br>  =>  Unity에서 제작한 2단계 화면
 
@@ -100,13 +101,14 @@
   - 모델이 인식되면 부품의 색이 변하게 하려고 모델과 똑같은 오브젝트를 자식으로 추가하고 material 변경
   - 조립에 필요한 오브젝트가 중강하기 위해 증강해야 하는 부분에 부품 오브젝트를 자식으로 추가
 </br>
-![image](https://github.com/user-attachments/assets/61164b21-36e6-4148-9682-5ce7d585bb26)
+<img src ='images/모델_오브젝트_배치.png'>
 
 <br/>
 
 #### 4. C# 스크립트 작성
 - 조립 화면에서 버튼을 통해 단계를 이동하기 위해 SceneManagement의 SceneManager.LoadScene을 이용하여 각 장면으로 이동할 수 있는 함수 작성
-  ![image](https://github.com/user-attachments/assets/49a3c9cd-f0e8-48c6-a5c3-d7cb15c69a13) <br/>
+  
+<img src = 'images/화면전환함수.png'> <br/>
   => 화면 전환 함수
   
 </br>
@@ -125,7 +127,7 @@
             -1이면 오브젝트가 밑으로 내려감
 - 만약 현재 오브젝트의 local값이 minY보다 작거나 maxY보다 크다면 sign값에 -1을 곱해서 오브젝트의 이동 방향을 바꿔줌
   
-![image](https://github.com/user-attachments/assets/b4310af8-e0da-4579-b984-8f900ddd0087)</br>
+<img src = 'images/오브젝트 이동 스크립트.png'></br>
 => 오브젝트 이동 스크립트 
 </br>
 
@@ -143,10 +145,10 @@
   
 - 스크립트를 완성한 후 Scene에 barcodeAsText와 연결할 TextMeshPro를 만들어 연결
 
-![image](https://github.com/user-attachments/assets/31b662a5-78ca-4c62-acac-e0ece01425ff) <br>
+<img src = 'images/바코드 인식 스크립트.png' width=50% height=50%> <br>
   => 바코드 인식 C# 스크립트
 
-![image](https://github.com/user-attachments/assets/9515cc6a-c526-481a-95a5-f9afa1c295df) <br>
+<img src = 'images/qr코드 인식 장면.png' width=50% height=50%> <br>
   => QR 코드 인식 화면 UI
 
 </br>
@@ -158,6 +160,8 @@
 1. QR 코드 인식 기능
 - 앱을 실행하면 가장 먼저 QR 코드를 인식하는 장면이 나옴
 - QR 코드가 화면에 비추게 되면 사진처럼 "설명서로 이동 중입니다." 라는 문구가 뜨고 제품에 맞는 해당 설명서로 자동으로 이동
+<img src = 'images/큐알코드.mp4'>
+<br>
 
 2. 부품 인식 기능
 -  부품 인식 기능은 부품을 찾을 때 사 용
